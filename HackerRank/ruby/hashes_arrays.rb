@@ -139,13 +139,13 @@ hackerrank = {"simmy" => 100, "vivmbbs" => 200}
 # user.each do |key, value|
     # some code on individual key, value
 # end
+
 # or
 #
 # user.each do |arr|
     # here arr[0] is the key and arr[1] is the value
 # end
 # Your task is to use each and iterate through the collection and print the key-value pair in separate lines.
-
 
 def iter_hash(hash)
     # your code here
@@ -154,3 +154,13 @@ def iter_hash(hash)
         puts value
     end
 end
+
+# In this challenge, a hash object called hackerrank is already created. You have to add
+
+# A key-value pair [543121, 100] to the hackerrank object using store
+# Retain all key-value pairs where keys are Integers ( clue : is_a? Integer )
+# Delete all key-value pairs where keys are even-valued.
+
+hackerrank.store(543121, 100)
+hackerrank.keep_if {|key, value| key.is_a? Integer}
+hackerrank.delete_if {|key, value| key.even?}
